@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 $morse_dict = {
   "a" => ".-",
   "b" => "-...",
@@ -28,6 +29,7 @@ $morse_dict = {
   " " => " ",
 }
 
+
 def decode_char(char) 
   letter=''
   $morse_dict.each{ |key, value|
@@ -39,4 +41,16 @@ def decode_char(char)
 return letter
 end
 
+def decode_word(word)
+  decoded = ''
+  word_array = word.split
+  word_array.each { |item|
+
+    decoded += decode_char(item)
+
+  }
+  return decoded 
+end
+
 print decode_char(".-")
+print decode_word("-- -.--")
