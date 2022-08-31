@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# 
+# rubocop:disable all
 
 def decode_char(char)
   morse_dict = { 'a' => '.-', 'b' => '-...', 'c' => '-.-.', 'd' => '-..', 'e' => '.', 'f' => '..-.',
