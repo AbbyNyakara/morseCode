@@ -13,28 +13,24 @@ def decode_char (char)
         letter = key.upcase
   end
   }
-return letter
+  letter
 end
 
 def decode_word(word)
   decoded = ''
   word_array = word.split
-  word_array.each { |item|
-    decoded += decode_char(item)
-  }
-  return decoded
+  word_array.each { |item| decoded += decode_char(item) }
+  decoded
 end
 
 def decode(sentence)
   decoded = ''
   sentence_array = sentence.split(/ /, 3)
-  sentence_array.each { |item|
-    decoded += decode_word(item)
-  }
-  return decoded
+  sentence_array.each { |item| decoded += decode_word(item) }
+  decoded
 end
 
-print decode_char('.-')
-print decode_word('-- -.--')
-print decode('-- -.--   -. .- -- .')
-print decode ('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+print decode_char '.-'
+print decode_word '-- -.--'
+print decode '-- -.--   -. .- -- .'
+print decode '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
