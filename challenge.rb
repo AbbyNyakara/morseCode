@@ -10,8 +10,8 @@ def decode_char (char)
   letter = ''
   morse_dict.each { |key, value|
     if char == value
-        letter = key.upcase
-  end
+      letter = key.upcase
+    end
   }
   letter
 end
