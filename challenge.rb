@@ -7,7 +7,9 @@ def decode_char(char)
                  'n' => '-.', 'o' => '---', 'p' => '.--.', 'q' => '--.-', 'r' => '.-.', 's' => '...', 't' => '-',
                  'u' => '..-', 'v' => '...-', 'w' => '.--', 'x' => '-..-', 'y' => '-.--', 'z' => '--..', ' ' => ' ' }
   letter = ''
-  morse_dict.each { |key, value| if char == value letter = key.upcase
+  morse_dict.each { |key, value| 
+    if char == value 
+      letter = key.upcase
     end
   }
   letter
