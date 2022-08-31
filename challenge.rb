@@ -62,3 +62,4 @@ end
 print decode_char(".-")
 print decode_word("-- -.--")
 print decode("-- -.--   -. .- -- .");
+print decode (".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
